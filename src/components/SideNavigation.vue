@@ -1,7 +1,9 @@
 <template>
     <div class="w-1/6  bg-transparent border-[#565656] border-r-[1px] border-opacity-10 fixed h-screen bg-white" id="sidenav">
 
-        <div class="w-full p-10 "></div>
+        <div class="w-full p-10 ">
+            <img :src="Logo" alt="logo" class="object-cover w-full h-full"/>
+        </div>
 
         <div class="link-body w-full  h-full mx-auto flex flex-col space-y-3">
 
@@ -87,13 +89,23 @@
 
 
 <script>
+
+import Logo from '../assets/images/webco.png';
+
 export default {
   name: "SideNavigation",
+  data() {
+    return {
+      Logo: Logo,
+    };
+  },
   methods: {
     changeView(view) {
-      this.$emit("changeView", view); // Emit an event when the link is clicked
+        
+      this.$emit("changeView", view);
     },
   },
+  
 };
 </script>
   
