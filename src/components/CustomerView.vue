@@ -13,16 +13,17 @@
 
         <div class="w-full   flex flex-row space-x-3 mt-5 bg-white">
 
-            <div class="w-1/3  flex flex-row justify-between items-center rounded-lg border-[1px] border-[#4de2b0]  border-l-[#4de2b0] border-l-[6px]
-            bg-gradient-to-l from-[#4de2b026] via-white to-transparent">
-                <div class="w-1/3 p-5 flex justify-center items-center">
+            <div class="w-1/3  flex flex-row justify-between items-center rounded-lg border-[1px] border-[#4acfa2]  border-l-[#4acfa2] border-r-[6px] 
+           
+            ">
+                <div class="w-1/3 p-5 flex justify-center items-center bg-gradient-to-l from-[#4acfa2]  to-[#4de2b0] rounded-tl-lg rounded-bl-lg">
                     <div class="w-[100px] h-[100px] rounded-full 
                     relative flex justify-center items-center 
                     ">
-                        <h2 class="md:text-[32px] text-[#4de2b0]"><font-awesome-icon :icon="['fas', 'users']" /></h2>
+                        <h2 class="md:text-[32px] text-[#FFFFFF]"><font-awesome-icon :icon="['fas', 'users']" /></h2>
                     </div>
                 </div>
-                <div class="w-2/3 p-5  flex flex-col text-left">
+                <div class="w-2/3 p-5  flex flex-col text-left ">
                     <h5 class="text-[14px] text-[#a9a9a9]">Total Customers</h5>
                     <h2 class="font-bold text-[1.8rem] text-[#3d3d3d]">5,675</h2>
                     <div class="flex flex-row space-x-2">
@@ -33,13 +34,13 @@
                 </div>
             </div>
 
-            <div class="w-1/3  flex flex-row justify-between items-center rounded-lg border-[1px] border-[#7a4de2]  border-l-[#7a4de2] border-l-[6px]
-                bg-gradient-to-l from-[#7a4de226] via-white to-transparent">
-                <div class="w-1/3 p-5 flex justify-center items-center">
+            <div class="w-1/3  flex flex-row justify-between items-center rounded-lg border-[1px] border-[#7a4de2]  border-l-[#7a4de2] border-r-[6px]
+               ">
+                <div class="w-1/3 p-5 flex justify-center items-center  bg-gradient-to-l from-[#5d30c4]  to-[#7a4de2] rounded-tl-lg rounded-bl-lg">
                     <div class="w-[100px] h-[100px] rounded-full 
                     relative flex justify-center items-center 
                     ">
-                        <h2 class="md:text-[32px] text-[#7a4de2]"><font-awesome-icon :icon="['fas', 'user-group']" /></h2>
+                        <h2 class="md:text-[32px] text-[#ffffff]"><font-awesome-icon :icon="['fas', 'user-group']" /></h2>
                     </div>
                 </div>
                 <div class="w-2/3 p-5 flex flex-col text-left">
@@ -53,13 +54,13 @@
                 </div>
             </div>
 
-            <div class="w-1/3  flex flex-row justify-between items-center rounded-lg border-[1px] border-[#4d8be2]  border-l-[#4d8be2] border-l-[6px] 
-            bg-gradient-to-l from-[#4d8be226] via-white to-transparent">
-                <div class="w-1/3 p-5 flex justify-center items-center">
+            <div class="w-1/3  flex flex-row justify-between items-center rounded-lg border-[1px] border-[#5599f7]  border-l-[#5599f7] border-r-[6px] 
+            ">
+                <div class="w-1/3 p-5 flex justify-center items-center bg-gradient-to-l from-[#487bc1]  to-[#5599f7]">
                     <div class="w-[100px] h-[100px] rounded-full
                      relative flex justify-center items-center 
                     ">
-                        <h2 class="md:text-[32px] text-[#4d8be2]"><font-awesome-icon :icon="['fas', 'user-clock']" /></h2>
+                        <h2 class="md:text-[32px] text-[#ffffff]"><font-awesome-icon :icon="['fas', 'user-clock']" /></h2>
                     </div>
                 </div>
                 <div class="w-2/3 p-5  flex flex-col text-left">
