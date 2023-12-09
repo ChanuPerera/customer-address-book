@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* .CustomerTable tr:nth-child(even)
+{
+    background-color: #d9dffe48;
+} */
+
+.pagination-link.is-current
+{
+    background-color: #adbbff;
+    color: #3d3d3d;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  
+  .status-indicator-active {
+    background: rgb(54,140,58);
+    background: linear-gradient(0deg, rgba(54,140,58,1) 0%, rgba(94,232,0,1) 100%);
+  }
+  
+  .status-indicator-inactive {
+    background: rgb(194,32,32);
+background: linear-gradient(0deg, rgba(194,32,32,1) 0%, rgba(255,65,65,1) 100%);
+  }
+
+
+  .status-indicator-outter {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .status-indicator-outter-active {
+    background-color: #4caf4f2e;
+  }
+  
+  .status-indicator-outter-inactive {
+    background-color: #F443362e; 
+  }
+
+
+
+
+  .status {
+    font-weight:500;
+  }
+  
+  .status-active {
+    color: #4CAF50;
+  }
+  
+  .status-inactive {
+    color: #F44336; 
+  }
+
+
+
