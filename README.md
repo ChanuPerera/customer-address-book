@@ -1,6 +1,6 @@
 # customer-address-book
 
-This project aims to assess my skills in UI/UX development using Vue.js 3 . The focus is on creating a dynamic and user-friendly interface for managing customer details.
+This project aims to assess my skills in UI/UX development using Vue.js 3 with the Composition API. The focus is on creating a dynamic and user-friendly interface for managing customer details.
 
 ## Getting Started
 
