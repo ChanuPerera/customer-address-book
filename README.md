@@ -12,6 +12,11 @@ Make sure you have the following installed on your machine:
 
 - [Node.js](https://nodejs.org/) (includes npm)
 
+### Technical Environment
+
+- Vue js 3
+- Tailwind
+
 ### Installation
 
 Step 1: Clone the repository
@@ -30,4 +35,7 @@ Step 3:Run the Project
 npm run serve
 ```
 
-Visit http://localhost:8080 in your web browser to interact with and test your Vue.js application.
+### Live Demo
+Visit https://whimsical-profiterole-0bd57d.netlify.app/
+
+
