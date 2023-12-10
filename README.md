@@ -2,6 +2,11 @@
 
 This project aims to assess my skills in UI/UX development using Vue.js 3 with the Composition API. The focus is on creating a dynamic and user-friendly interface for managing customer details.
 
+## Technical Environment
+
+- Vue js 3
+- Tailwind
+  
 ## Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine.
@@ -11,11 +16,6 @@ Follow these instructions to get a copy of the project up and running on your lo
 Make sure you have the following installed on your machine:
 
 - [Node.js](https://nodejs.org/) (includes npm)
-
-### Technical Environment
-
-- Vue js 3
-- Tailwind
 
 ### Installation
 
