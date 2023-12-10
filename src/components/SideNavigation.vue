@@ -383,6 +383,7 @@ export default {
 
         };
     },
+    
     methods: {
         changeView(view) {
             this.transitionName = "slide";
@@ -390,6 +391,10 @@ export default {
             this.$emit("changeView", view);
         },
 
+    },
+    created() {
+        // setting the customers views as default change view
+        this.changeView("customers");
     },
 };
 </script>
