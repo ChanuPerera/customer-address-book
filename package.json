@@ -10,7 +10,6 @@
   "dependencies": {
     "@coreui/icons": "^3.0.1",
     "@coreui/icons-vue": "^2.0.0",
-    "@formkit/vue": "^1.4.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
