@@ -1,156 +1,347 @@
 <template>
-    <div class="w-1/6  bg-transparent border-[#565656] border-r-[1px] border-opacity-10 fixed h-screen bg-white" id="sidenav">
+    <div class="w-1/6  bg-transparent border-[#565656] border-r-[1px] border-opacity-10 fixed h-screen bg-white"
+        id="sidenav">
 
         <div class="w-full p-10 ">
-            <img :src="Logo" alt="logo" class="object-cover w-full h-full"/>
+            <img :src="Logo" alt="logo" class="object-cover w-full h-full" />
         </div>
 
         <div class="link-body w-full  h-full mx-auto flex flex-col space-y-3">
 
+
             <div class=" w-full flex flex-col space-y-2">
+
+
                 <div class="w-full justify-start items-center px-5">
                     <span class="text-[10px] font-bold text-[#565656] uppercase">dashboard</span>
                 </div>
-                <div class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]" @click="changeView('dashboard')">
-                    <div class="w-[5px] h-[40px] bg-[#627BFE]">
 
-                    </div>
-                    <div
-                        class="w-[80%] h-full rounded-md border-[1px] border-[#627BFE] mx-auto flex items-center justify-start flex-row">
-                        <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
-                            <font-awesome-icon :icon="['fas', 'square-poll-vertical']" class="text-[#627BFE]" />
+
+                <div class="w-full flex flex-row relative h-[44px]">
+                    <transition :name="transitionName">
+                        <div v-if="activeView !== 'dashboard'" key="link-button" @click="changeView('dashboard')"
+                            class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]">
+
+                            <div class="w-[80%] h-full rounded-md  mx-auto flex items-center justify-start flex-row">
+                                <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
+                                    <font-awesome-icon :icon="['fas', 'square-poll-vertical']" class="text-[#565656]" />
+                                </div>
+
+                                <span class="text-[#565656]">
+                                    Dashbaord
+                                </span>
+
+                            </div>
                         </div>
+                    </transition>
+                    <transition :name="transitionName">
+                        <div v-if="activeView === 'dashboard'" key="link-button-active" class="link-button-active cursor-pointer w-full  flex flex-row justify-center items-center h-[44px]
+                absolute
+                " @click="changeView('dashboard')">
+                            <div class="w-[5px] h-[40px] bg-[#5f79ff]">
 
-                        <span class="text-[#627BFE]">
-                            Dashbaord
-                        </span>
-
-                    </div>
+                            </div>
+                            <div
+                class="outter-link-btn w-[80%] h-full rounded-md 
+                bg-gradient-to-l  from-[#8fa2ff] to-[#5f79ff] shadow-md shadow-slate-300
+                mx-auto flex items-center justify-start flex-row ">
+<div class="w-full h-full bg-white mx-auto flex items-center justify-start flex-row rounded-md">
+    <div class="w-[44px] h-[44px] flex items-center justify-center ">
+                    <font-awesome-icon :icon="['fas', 'square-poll-vertical']" class="text-[#5f79ff]" />
                 </div>
+
+                <span class="text-[#5f79ff]">
+                    Dashboard
+                </span>
+</div>
+                
+
+                            </div>
+                        </div>
+                    </transition>
+                </div>
+
             </div>
 
 
-            <div class="w-full flex flex-col space-y-2">
+            <div class=" w-full flex flex-col space-y-2">
+
+
                 <div class="w-full justify-start items-center px-5">
                     <span class="text-[10px] font-bold text-[#565656] uppercase">products</span>
                 </div>
-                <div class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]"  @click="changeView('products')">
-                    <div class="w-[5px] h-[40px] bg-[#627BFE]">
 
-                    </div>
-                    <div
-                        class="w-[80%] h-full rounded-md border-[1px] border-[#627BFE] mx-auto flex items-center justify-start flex-row">
-                        <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
-                            <font-awesome-icon :icon="['fas', 'cubes']" class="text-[#627BFE]"/>
+
+                <div class="w-full flex flex-row relative h-[44px]">
+                    <transition :name="transitionName">
+                        <div v-if="activeView !== 'products'" key="link-button" @click="changeView('products')"
+                            class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]">
+
+                            <div class="w-[80%] h-full rounded-md  mx-auto flex items-center justify-start flex-row">
+                                <div class="w-[44px] h-[44px] flex items-center justify-center ">
+                                    <font-awesome-icon :icon="['fas', 'cubes']" class="text-[#565656]" />
+                                </div>
+
+                                <span class="text-[#565656]">
+                                    Products
+                                </span>
+
+                            </div>
                         </div>
+                    </transition>
+                    <transition :name="transitionName">
+                        <div v-if="activeView === 'products'" key="link-button-active" class="link-button-active cursor-pointer w-full  flex flex-row justify-center items-center h-[44px]
+absolute
+" @click="changeView('products')">
+                            <div class="w-[5px] h-[40px] bg-[#5f79ff]">
 
-                        <span class="text-[#627BFE]">
-                            Products
-                        </span>
-
-                    </div>
+                            </div>
+                            <div
+                class="outter-link-btn w-[80%] h-full rounded-md 
+                bg-gradient-to-l  from-[#8fa2ff] to-[#5f79ff] shadow-md shadow-slate-300
+                mx-auto flex items-center justify-start flex-row ">
+<div class="w-full h-full bg-white mx-auto flex items-center justify-start flex-row rounded-md">
+    <div class="w-[44px] h-[44px] flex items-center justify-center ">
+                    <font-awesome-icon :icon="['fas', 'cubes']" class="text-[#5f79ff]" />
                 </div>
+
+                <span class="text-[#5f79ff]">
+                    Products
+                </span>
+</div>
+                
+
+                            </div>
+                        </div>
+                    </transition>
+                </div>
+
             </div>
 
 
-            <div class="w-full flex flex-col space-y-2">
-                <div class="w-full justify-start items-center px-5">
-                    <span class="text-[10px] font-bold text-[#565656] uppercase">customers</span>
+            <div class=" w-full flex flex-col space-y-2">
+
+
+<div class="w-full justify-start items-center px-5">
+    <span class="text-[10px] font-bold text-[#565656] uppercase">Customers</span>
+</div>
+
+
+<div class="w-full flex flex-row relative h-[44px]">
+    <transition :name="transitionName">
+        <div v-if="activeView !== 'customers'" key="link-button" @click="changeView('customers')"
+            class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]">
+
+            <div class="w-[80%] h-full rounded-md  mx-auto flex items-center justify-start flex-row">
+                <div class="w-[44px] h-[44px] flex items-center justify-center ">
+                    <font-awesome-icon :icon="['fas', 'user']" class="text-[#565656]" />
                 </div>
-                <div class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]" @click="changeView('customers')">
-                    <div class="w-[5px] h-[40px] bg-[#627BFE]">
 
-                    </div>
-                    <div
-                        class="w-[80%] h-full rounded-md border-[1px] border-[#627BFE] mx-auto flex items-center justify-start flex-row">
-                        <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
-                    
-                            <font-awesome-icon :icon="['fas', 'user']" class="text-[#627BFE]"/>
-                        </div>
+                <span class="text-[#565656]">
+                    Customers
+                </span>
 
-                        <span class="text-[#627BFE]">
-                            Customers
-                        </span>
+            </div>
+        </div>
+    </transition>
+    <transition :name="transitionName">
+        <div v-if="activeView === 'customers'" key="link-button-active" class="link-button-active cursor-pointer w-full  flex flex-row justify-center items-center h-[44px]
+absolute
+" @click="changeView('customers')">
+            <div class="w-[5px] h-[40px] bg-[#5f79ff]">
 
-                    </div>
+            </div>
+            <div
+                class="outter-link-btn w-[80%] h-full rounded-md 
+                bg-gradient-to-l  from-[#8fa2ff] to-[#5f79ff] shadow-md shadow-slate-300
+                mx-auto flex items-center justify-start flex-row ">
+<div class="w-full h-full bg-white mx-auto flex items-center justify-start flex-row rounded-md">
+    <div class="w-[44px] h-[44px] flex items-center justify-center ">
+                    <font-awesome-icon :icon="['fas', 'user']" class="text-[#5f79ff]" />
                 </div>
+
+                <span class="text-[#5f79ff]">
+                    Customers
+                </span>
+</div>
+                
+
+            </div>
+        </div>
+    </transition>
+</div>
+
+            </div>
+
+
+            <div class=" w-full flex flex-col space-y-2">
+
+
+<div class="w-full justify-start items-center px-5">
+    <span class="text-[10px] font-bold text-[#565656] uppercase">income</span>
+</div>
+
+
+<div class="w-full flex flex-row relative h-[44px]">
+    <transition :name="transitionName">
+        <div v-if="activeView !== 'income'" key="link-button" @click="changeView('income')"
+            class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]">
+
+            <div class="w-[80%] h-full rounded-md  mx-auto flex items-center justify-start flex-row">
+                <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
+                    <font-awesome-icon :icon="['fas', 'coins']" class="text-[#565656]" />
+                </div>
+
+                <span class="text-[#565656]">
+                    Income
+                </span>
+
+            </div>
+        </div>
+    </transition>
+    <transition :name="transitionName">
+        <div v-if="activeView === 'income'" key="link-button-active" class="link-button-active cursor-pointer w-full  flex flex-row justify-center items-center h-[44px]
+absolute
+" @click="changeView('income')">
+            <div class="w-[5px] h-[40px] bg-[#5f79ff]">
+
+            </div>
+            <div
+                class="outter-link-btn w-[80%] h-full rounded-md 
+                bg-gradient-to-l  from-[#8fa2ff] to-[#5f79ff] shadow-md shadow-slate-300
+                mx-auto flex items-center justify-start flex-row ">
+<div class="w-full h-full bg-white mx-auto flex items-center justify-start flex-row rounded-md">
+    <div class="w-[44px] h-[44px] flex items-center justify-center ">
+                    <font-awesome-icon :icon="['fas', 'coins']" class="text-[#5f79ff]" />
+                </div>
+
+                <span class="text-[#5f79ff]">
+                    Income
+                </span>
+</div>
+                
+
+            </div>
+        </div>
+    </transition>
+</div>
+
             </div>
 
 
 
-            <div class="w-full flex flex-col space-y-2">
-                <div class="w-full justify-start items-center px-5">
-                    <span class="text-[10px] font-bold text-[#565656] uppercase">income</span>
+            <div class=" w-full flex flex-col space-y-2">
+
+
+<div class="w-full justify-start items-center px-5">
+    <span class="text-[10px] font-bold text-[#565656] uppercase">promote</span>
+</div>
+
+
+<div class="w-full flex flex-row relative h-[44px]">
+    <transition :name="transitionName">
+        <div v-if="activeView !== 'promote'" key="link-button" @click="changeView('promote')"
+            class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]">
+
+            <div class="w-[80%] h-full rounded-md  mx-auto flex items-center justify-start flex-row">
+                <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
+                    <font-awesome-icon :icon="['fas', 'arrow-trend-up']" class="text-[#565656]" />
                 </div>
-                <div class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]" @click="changeView('customers')">
-                    <div class="w-[5px] h-[40px] bg-[#627BFE]">
 
-                    </div>
-                    <div
-                        class="w-[80%] h-full rounded-md border-[1px] border-[#627BFE] mx-auto flex items-center justify-start flex-row">
-                        <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
-                    
-                            <font-awesome-icon :icon="['fas', 'coins']" class="text-[#627BFE]" />
-                        </div>
+                <span class="text-[#565656]">
+                    Promote
+                </span>
 
-                        <span class="text-[#627BFE]">
-                            Income
-                        </span>
+            </div>
+        </div>
+    </transition>
+    <transition :name="transitionName">
+        <div v-if="activeView === 'promote'" key="link-button-active" class="link-button-active cursor-pointer w-full  flex flex-row justify-center items-center h-[44px]
+absolute
+" @click="changeView('promote')">
+            <div class="w-[5px] h-[40px] bg-[#5f79ff] ">
 
-                    </div>
+            </div>
+            <div
+                class="outter-link-btn w-[80%] h-full rounded-md 
+                bg-gradient-to-l  from-[#8fa2ff] to-[#5f79ff] shadow-md shadow-slate-300
+                mx-auto flex items-center justify-start flex-row ">
+<div class="w-full h-full bg-white mx-auto flex items-center justify-start flex-row rounded-md">
+    <div class="w-[44px] h-[44px] flex items-center justify-center ">
+                    <font-awesome-icon :icon="['fas', 'arrow-trend-up']" class="text-[#5f79ff]" />
                 </div>
+
+                <span class="text-[#5f79ff]">
+                    Promote
+                </span>
+</div>
+                
+
+            </div>
+        </div>
+    </transition>
+</div>
+
+            </div>
+
+
+            <div class=" w-full flex flex-col space-y-2">
+
+
+<div class="w-full justify-start items-center px-5">
+    <span class="text-[10px] font-bold text-[#565656] uppercase">Help</span>
+</div>
+
+
+<div class="w-full flex flex-row relative h-[44px]">
+    <transition :name="transitionName">
+        <div v-if="activeView !== 'help'" key="link-button" @click="changeView('help')"
+            class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]">
+
+            <div class="w-[80%] h-full rounded-md  mx-auto flex items-center justify-start flex-row">
+                <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
+                    <font-awesome-icon :icon="['fas', 'circle-question']" class="text-[#565656]" />
+                </div>
+
+                <span class="text-[#565656]">
+                    Help
+                </span>
+
+            </div>
+        </div>
+    </transition>
+    <transition :name="transitionName">
+        <div v-if="activeView === 'help'" key="link-button-active" class="link-button-active cursor-pointer w-full  flex flex-row justify-center items-center h-[44px]
+absolute
+" @click="changeView('help')">
+            <div class="w-[5px] h-[40px] bg-[#5f79ff]">
+
+            </div>
+            <div
+                class="outter-link-btn w-[80%] h-full rounded-md 
+                bg-gradient-to-l  from-[#8fa2ff] to-[#5f79ff] shadow-md shadow-slate-300
+                mx-auto flex items-center justify-start flex-row ">
+<div class="w-full h-full bg-white mx-auto flex items-center justify-start flex-row rounded-md">
+    <div class="w-[44px] h-[44px] flex items-center justify-center ">
+                    <font-awesome-icon :icon="['fas', 'circle-question']" class="text-[#5f79ff]" />
+                </div>
+
+                <span class="text-[#5f79ff]">
+                    Help
+                </span>
+</div>
+                
+
+            </div>
+        </div>
+    </transition>
+</div>
+
             </div>
 
 
 
 
-            <div class="w-full flex flex-col space-y-2">
-                <div class="w-full justify-start items-center px-5">
-                    <span class="text-[10px] font-bold text-[#565656] uppercase">promote</span>
-                </div>
-                <div class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]" @click="changeView('customers')">
-                    <div class="w-[5px] h-[40px] bg-[#627BFE]">
-
-                    </div>
-                    <div
-                        class="w-[80%] h-full rounded-md border-[1px] border-[#627BFE] mx-auto flex items-center justify-start flex-row">
-                        <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
-                    
-                            <font-awesome-icon :icon="['fas', 'arrow-trend-up']" class="text-[#627BFE]"/>
-                        </div>
-
-                        <span class="text-[#627BFE]">
-                            Promote
-                        </span>
-
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="w-full flex flex-col space-y-2">
-                <div class="w-full justify-start items-center px-5">
-                    <span class="text-[10px] font-bold text-[#565656] uppercase">help</span>
-                </div>
-                <div class="link-button cursor-pointer w-full relative flex flex-row justify-center items-center h-[44px]" @click="changeView('customers')">
-                    <div class="w-[5px] h-[40px] bg-[#627BFE]">
-
-                    </div>
-                    <div
-                        class="w-[80%] h-full rounded-md border-[1px] border-[#627BFE] mx-auto flex items-center justify-start flex-row">
-                        <div class="w-[44px] h-[44px] flex items-center justify-center  bg">
-                    
-                            <font-awesome-icon :icon="['fas', 'circle-question']" class="text-[#627BFE]"/>
-                        </div>
-
-                        <span class="text-[#627BFE]">
-                            Help
-                        </span>
-
-                    </div>
-                </div>
-            </div>
 
 
 
@@ -171,19 +362,20 @@
 import Logo from '../assets/images/webco.png';
 
 export default {
-  name: "SideNavigation",
-  data() {
-    return {
-      Logo: Logo,
-    };
-  },
-  methods: {
-    changeView(view) {
-        
-      this.$emit("changeView", view);
+    name: "SideNavigation",
+    data() {
+        return {
+            Logo: Logo,
+            activeView: null,
+            transitionName: "slide",
+        };
     },
-  },
-  
+    methods: {
+        changeView(view) {
+            this.transitionName = "slide";
+            this.activeView = view;
+            this.$emit("changeView", view);
+        },
+    },
 };
 </script>
-  

@@ -137,21 +137,21 @@
 
             <table class="CustomerTable w-full ">
                 <th
-                    class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#adbbff] rounded-tl-lg text-[14px]">
+                    class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#8fa2ff] rounded-tl-lg text-[14px]">
                 </th>
 
-                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#adbbff] text-[14px] ">
+                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#8fa2ff] text-[14px] ">
                     Customer Name</th>
-                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#adbbff] text-[14px]">
+                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#8fa2ff] text-[14px]">
                     Company</th>
-                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#adbbff] text-[14px]">
+                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#8fa2ff] text-[14px]">
                     Contact No</th>
-                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#adbbff] text-[14px]">Email
+                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#8fa2ff] text-[14px]">Email
                 </th>
-                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#adbbff] text-[14px]">
+                <th class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#8fa2ff] text-[14px]">
                     Country</th>
                 <th
-                    class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#adbbff] rounded-tr-lg text-[14px]">
+                    class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#8fa2ff] rounded-tr-lg text-[14px]">
                     Status</th>
 
                 <tbody>
