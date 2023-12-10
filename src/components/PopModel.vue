@@ -10,7 +10,7 @@
                     Customer</p>
                 <button class="delete bg-[#627BFE] cursor-pointer" aria-label="close" @click="closeModel"></button>
             </header>
-            <section class="modal-card-body ">
+            <section class="modal-card-body " id="style-7">
 
                 <form @submit="onSubmit">
 

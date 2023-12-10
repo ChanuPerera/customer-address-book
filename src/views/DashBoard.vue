@@ -1,12 +1,12 @@
 
 <template>
-  <div class="w-full flex flex-row">
+  <div class="w-full flex flex-row" >
     <MobileNav @toggleSideNavigation="toggleSideNavigation" />
     <SideNavigation
       @changeView="changeView"
       :showSideNavigation="showSideNavigation"
     />
-    <div class="lg:w-full w-screen h-screen flex flex-row mt-10 md:mt-0">
+    <div class="lg:w-full w-screen h-screen flex flex-row mt-10 md:mt-0 overflow-x-auto" id="style-7">
 
       <div class="lg:w-1/6 hidden sm:block sm:w-[100px] md:w-[100px]"></div>
 

@@ -1,6 +1,6 @@
 
 <template>
-  <div id="app" class="w-full h-screen flex flex-row bg-white">
+  <div id="app " class="w-full h-screen flex flex-row bg-white">
 
     <DashBoard /> 
  

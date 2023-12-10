@@ -1,5 +1,5 @@
 <template>
-    <div class="PromotedView w-full flex flex-col ">
+    <div class="PromotedView w-full flex flex-col " >
         <div class="text-[1.5rem] font-bold text-[#3d3d3d] w-full flex flex-row justify-between items-center">
             <h2>Hello Ronald!</h2>
         </div>

@@ -1,5 +1,5 @@
-<template>
-    <div class="CutomerView w-full flex flex-col h-auto overflow-y-auto ">
+<template id="style-7">
+    <div class="CutomerView w-full flex flex-col h-auto overflow-y-auto " id="style-7">
 
         <div class="text-[1.5rem] font-bold text-[#3d3d3d] w-full flex flex-row justify-between items-center">
             <h2>Hello Ronald!</h2>
@@ -103,7 +103,7 @@
         <div
             class="w-full border-[1px] border-[#565656] border-opacity-20 flex flex-col space-y-5 rounded-lg md:p-5 p-3 mt-10 bg-white
             
-            relative overflow-x-auto">
+            relative overflow-x-auto" id="style-7">
 
             <div class="w-full flex md:flex-row flex-col space-y-3 md:space-y-0 justify-between ">
                 <div class="flex flex-col">
@@ -136,7 +136,7 @@
             </div>
 
 
-<div class="w-full relative overflow-x-auto">
+<div class="w-full relative overflow-x-auto" id="style-7">
     <table class="CustomerTable w-full ">
                 <th
                     class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#8fa2ff] rounded-tl-lg text-[14px]">
