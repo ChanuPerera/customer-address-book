@@ -58,6 +58,21 @@
 
                             <div class="w-full flex flex-col space-y-1">
                                 <div class="w-full flex flex-row justify-between ">
+                                    <span class="text-[12px] text-[#3d3d3d] uppercase font-medium">Date of Birth <span
+                                            class="text-[14px] text-red-700">*</span></span>
+                                    <span class="text-[12px] text-red-700">{{ errors.dob }}</span>
+                                </div>
+
+
+                                <input class="input text-[12px]" type="date" placeholder="DD/MM/YYYY" v-bind="dob"
+                                    required>
+
+                            </div>
+
+
+
+                            <div class="w-full flex flex-col space-y-1">
+                                <div class="w-full flex flex-row justify-between ">
                                     <span class="text-[12px] text-[#3d3d3d] uppercase font-medium">Email <span
                                             class="text-[14px] text-red-700">*</span></span>
                                     <span class="text-[12px] text-red-700">{{ errors.email }}</span>
@@ -266,6 +281,7 @@ const company = defineInputBinds('company');
 const email = defineInputBinds('email');
 const contact = defineInputBinds('contact');
 const country = defineInputBinds('country');
+const dob = defineInputBinds('dob');
 const homeno = defineInputBinds('homeno');
 const city = defineInputBinds('city');
 const street = defineInputBinds('street');
