@@ -17,4 +17,9 @@ Make sure you have the following installed on your machine:
 Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/ChanuPerera/customer-address-book/your-repository.git
+
+```
+Step 2: Install Dependencies
+```bash
+npm install
