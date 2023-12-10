@@ -11,19 +11,19 @@
         </div>
         <PopModel v-if="modals.formModal" v-model="modals.formModal"/>
 
-        <div class="w-full   flex flex-row space-x-3 mt-5 bg-white">
+        <div class="w-full flex md:flex-row flex-col justify-between md:space-x-3 space-x-0 space-y-3 md:space-y-0 mt-5  relative">
 
-            <div class="w-1/3  flex flex-row justify-between items-center rounded-lg border-[1px] border-[#4acfa2]  border-l-[#4acfa2] border-r-[6px] 
+            <div class="lg:w-1/3 sm:w-4/12 flex flex-row justify-between items-center rounded-lg border-[1px] border-[#4acfa2]  border-l-[#4acfa2] border-r-[6px] 
            
             ">
-                <div class="w-1/3 p-5 flex justify-center items-center bg-gradient-to-l from-[#4acfa2]  to-[#4de2b0] rounded-tl-lg rounded-bl-lg">
+                <div class="w-1/3 lg:p-5 sm:p-3  flex justify-center items-center bg-gradient-to-l from-[#4acfa2]  to-[#4de2b0] rounded-tl-lg rounded-bl-lg">
                     <div class="w-[100px] h-[100px] rounded-full 
                     relative flex justify-center items-center 
                     ">
-                        <h2 class="md:text-[32px] text-[#FFFFFF]"><font-awesome-icon :icon="['fas', 'users']" /></h2>
+                        <h2 class="text-[32px] text-[#FFFFFF]"><font-awesome-icon :icon="['fas', 'users']" /></h2>
                     </div>
                 </div>
-                <div class="w-2/3 p-5  flex flex-col text-left ">
+                <div class="w-2/3 lg:p-5 sm:p-3 px-5 sm:px-0 flex flex-col text-left ">
                     <h5 class="text-[14px] text-[#a9a9a9]">Total Customers</h5>
                     <h2 class="font-bold text-[1.8rem] text-[#3d3d3d]">5,675</h2>
                     <div class="flex flex-row space-x-2">
@@ -34,16 +34,16 @@
                 </div>
             </div>
 
-            <div class="w-1/3  flex flex-row justify-between items-center rounded-lg border-[1px] border-[#7a4de2]  border-l-[#7a4de2] border-r-[6px]
+            <div class="lg:w-1/3 sm:w-4/12 flex flex-row justify-between items-center rounded-lg border-[1px] border-[#7a4de2]  border-l-[#7a4de2] border-r-[6px]
                ">
-                <div class="w-1/3 p-5 flex justify-center items-center  bg-gradient-to-l from-[#5d30c4]  to-[#7a4de2] rounded-tl-lg rounded-bl-lg">
+                <div class="w-1/3 lg:p-5 sm:p-3 flex justify-center items-center  bg-gradient-to-l from-[#5d30c4]  to-[#7a4de2] rounded-tl-lg rounded-bl-lg">
                     <div class="w-[100px] h-[100px] rounded-full 
                     relative flex justify-center items-center 
                     ">
-                        <h2 class="md:text-[32px] text-[#ffffff]"><font-awesome-icon :icon="['fas', 'user-group']" /></h2>
+                        <h2 class="text-[32px] text-[#ffffff]"><font-awesome-icon :icon="['fas', 'user-group']" /></h2>
                     </div>
                 </div>
-                <div class="w-2/3 p-5 flex flex-col text-left">
+                <div class="w-2/3 lg:p-5 sm:p-3 px-5 sm:px-0 flex flex-col text-left">
                     <h5 class="text-[14px] text-[#a9a9a9]">Members</h5>
                     <h2 class="font-bold text-[1.8rem] text-[#3d3d3d]">1,675</h2>
                     <div class="flex flex-row space-x-2">
@@ -54,16 +54,16 @@
                 </div>
             </div>
 
-            <div class="w-1/3  flex flex-row justify-between items-center rounded-lg border-[1px] border-[#5599f7]  border-l-[#5599f7] border-r-[6px] 
+            <div class="lg:w-1/3 sm:w-4/12 flex flex-row justify-between items-center rounded-lg border-[1px] border-[#5599f7]  border-l-[#5599f7] border-r-[6px] 
             ">
-                <div class="w-1/3 p-5 flex justify-center items-center bg-gradient-to-l from-[#487bc1]  to-[#5599f7]">
+                <div class="w-1/3 lg:p-5 sm:p-3 flex justify-center items-center bg-gradient-to-l from-[#487bc1]  to-[#5599f7]">
                     <div class="w-[100px] h-[100px] rounded-full
                      relative flex justify-center items-center 
                     ">
-                        <h2 class="md:text-[32px] text-[#ffffff]"><font-awesome-icon :icon="['fas', 'user-clock']" /></h2>
+                        <h2 class="text-[32px] text-[#ffffff]"><font-awesome-icon :icon="['fas', 'user-clock']" /></h2>
                     </div>
                 </div>
-                <div class="w-2/3 p-5  flex flex-col text-left">
+                <div class="w-2/3 lg:p-5 sm:p-3 px-5 sm:px-0 flex flex-col text-left">
                     <h5 class="text-[14px] text-[#a9a9a9]">Active Now</h5>
                     <h2 class="font-bold text-[1.8rem] text-[#3d3d3d]">45</h2>
                     <div class="flex flex-row -space-x-2">
@@ -101,15 +101,17 @@
 
 
         <div
-            class="w-full border-[1px] border-[#565656] border-opacity-20 flex flex-col space-y-5 rounded-lg p-5 mt-10 bg-white">
+            class="w-full border-[1px] border-[#565656] border-opacity-20 flex flex-col space-y-5 rounded-lg md:p-5 p-3 mt-10 bg-white
+            
+            relative overflow-x-auto">
 
-            <div class="w-full flex flex-row justify-between ">
+            <div class="w-full flex md:flex-row flex-col space-y-3 md:space-y-0 justify-between ">
                 <div class="flex flex-col">
                     <h3 class="text-[#3d3d3d] text-[1.2rem] font-bold">All Customers</h3>
                     <h5 class="text-[14px] text-green-500 capitalize">Active Members</h5>
                 </div>
 
-                <div class="flex flex-row justify-between items-center w-1/3 space-x-3">
+                <div class="flex flex-row justify-between items-center md:w-1/3 w-full space-x-3">
                     <div
                         class="md:w-2/3 rounded-md border-[1px] border-[#565656] border-opacity-30 flex flex-row h-[36px] justify-between">
                         <input type="text"
@@ -121,7 +123,7 @@
                         </div>
                     </div>
 
-                    <div class="w-1/3 flex flex-row h-[36px] justify-center items-center space-x-2">
+                    <div class="w-1/3 flex flex-row h-[36px] justify-center items-center space-x-2 ">
                         <span class="text-[12px] text-[#3d3d3d] font-semibold">Sort</span>
                         <select
                             class="border-[1px] rounded-md w-full px-2 h-[36px] outline-none text-[14px] cursor-pointer ">
@@ -134,8 +136,8 @@
             </div>
 
 
-
-            <table class="CustomerTable w-full ">
+<div class="w-full relative overflow-x-auto">
+    <table class="CustomerTable w-full ">
                 <th
                     class="font-medium p-2 border-b-[1px] border-[#565656] border-opacity-10 bg-[#8fa2ff] rounded-tl-lg text-[14px]">
                 </th>
@@ -214,6 +216,8 @@
                 </tbody>
 
             </table>
+</div>
+            
 
             <div class="w-full justify-end flex">
                 <nav class="pagination is-small" role="navigation" aria-label="pagination">

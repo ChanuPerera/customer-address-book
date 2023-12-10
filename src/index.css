@@ -7,10 +7,6 @@ body{
     padding: 0;
 }
 
-/* .CustomerTable tr:nth-child(even)
-{
-    background-color: #d9dffe48;
-} */
 
 .pagination-link.is-current
 {
@@ -104,4 +100,32 @@ background: linear-gradient(0deg, rgba(194,32,32,1) 0%, rgba(255,65,65,1) 100%);
 .outter-link-btn
 {
   padding: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:576px)
+{
+
+
+ .slide-in {
+  transition: all .5s ease-in-out;
+  transform: translateX(0);
+}
+
+.slide-out {
+  transition: all .5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+
+
+
 }
